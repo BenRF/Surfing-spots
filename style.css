@@ -1,0 +1,336 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    background: #f5f7f4;
+}
+#map {
+    width: 70%;
+    height: 90vh;
+    margin-top: 10vh;
+    float: left;
+}
+#spots {
+    width: 30%;
+    height: 90vh;
+    margin-top: 0px;
+    float: left;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+div.resultScreen {
+    transition: 1.5s;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+}
+div.rightScreen {
+    left: 100% !important;
+}
+div.leftScreen {
+    left: -100% !important;
+}
+div.skillSelect {
+    transition: 1.5s;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+div.skillSelectBox {
+    width: 40%;
+    height: 30%;
+    margin-left: 8%;
+    margin-bottom: 10%;
+    float: left;
+}
+div.skill {
+    cursor: pointer;
+    transition: 0.5s;
+    border: 0px solid black;
+    width: 100%;
+    height: 38%;
+    padding-top: 25px;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    opacity: 0.8;
+    border-radius: 10px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+div.skill:hover {
+    opacity: 1 !important;
+}
+div.skill:active {
+    opacity: 0.6 !important;
+}
+div.selectedSkill {
+    width: calc(100% - 8px) !important;
+    height: calc(38% - 8px) !important;
+    border: 4px solid #313436;
+    opacity: 1;
+}
+div.faded {
+    opacity: 0.3 !important;
+}
+p.skillTitle {
+    margin: 0px;
+    padding: 0px;
+    font-size: 25px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: white;
+}
+p.skillDescription {
+    color: white;
+    font-family: 'Open sans';
+    width: 87.5%;
+    margin: 0px;
+    margin-top: 10px;
+}
+div.novice {
+    background: #3dab34;
+}
+div.intermediate {
+    background: #d07c1e;
+}
+div.expert {
+    background: #d32525;
+}
+p.productTitle {
+    margin: 0px;
+    padding: 0px;
+    transition: 1s;
+    font-size: 35px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    position: absolute;
+    color: #313436;
+}
+p.pageOne {
+    width: 100%;
+    text-align: center;
+    top: 5%;
+}
+p.pageTwo {
+    width: 18%;
+    text-align: center;
+    top: 3%;
+}
+div.locationSelect {
+    border: 0px solid #313436;
+    margin-left: 10%;
+    margin-top: 1%;
+    width: 30%;
+    height: 35%;
+    border-radius: 10px;
+    float: left;
+}
+p.sectionHeader {
+    margin-top: 10%;
+    margin-left: 23%;
+    font-size: 20px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: #313436;
+}
+div.locationOption {
+    cursor: pointer;
+    transition: 0.5s;
+    width: 100%;
+    height: calc(50% - 25px);
+    padding-top: 20px;
+    opacity: 0.8;
+    float: left;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+div.selected {
+    opacity: 1;
+}
+div.locationOption:hover {
+    opacity: 1;
+}
+div.locationOption:active {
+    opacity: 0.6;
+}
+p.locationOptionTitle {
+    margin: 0px;
+    font-size: 25px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: #313436;
+    text-align: center;
+}
+p.locationOptionPosition {
+    margin: 0px;
+    font-size: 20px;
+    font-family: 'Open sans';
+    color: #313436;
+    text-align: center;
+}
+p.locationSelectionHeader {
+    position: relative;
+    top: -18%;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: #313436;
+}
+input.locationInput {
+    transition: 0.5s;
+    height: 10%;
+    width: calc(35% - 20px);
+    margin-left: 15%;
+    margin-top: 8%;
+    font-size: 120%;
+    text-align: center;
+    padding-left: 5px;
+    border: 0px;
+    border-bottom: 1.25px solid #a1a1a1;
+    background-color: transparent;
+    outline: none;
+    color: #696969;
+    font-family: 'Open sans';
+    float: left;
+}
+input.locationInput:hover {
+    border-bottom: 1.35px solid #878787;
+}
+input.locationInput:focus, input.locationInput:focus{
+    transition: 0.5s;
+    outline: none;
+    border-bottom: 1.35px solid #878787;
+}
+.btn {
+    transition: 0.5s;
+    cursor: pointer;
+    position: relative;
+    display: block;
+    margin: auto;
+    margin-top: 30%;
+    width: 20%;
+    padding: 0;
+    overflow: hidden;
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+    background-color: #4287f5;
+    color: #ecf0f1;
+    opacity: 0.8;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+}
+.disabled {
+    background-color: #948a8a;
+    cursor:not-allowed !important;
+    opacity: 1;
+}
+.btn:hover, .btn:focus {
+    opacity: 1;
+}
+.btn > * {
+    position: relative;
+}
+.btn span {
+    display: block;
+    padding: 15px 30px;
+}
+div.spot {
+    transition: 1s;
+    width: 100%;
+    height: 75px;
+    padding-left: 35px;
+    padding-top: 20px;
+}
+div.focused p.spotName {
+    font-size: 30px !important;
+}
+div.focused p.spotTravelTime {
+    font-size: 25px !important;
+}
+p.spotName {
+    transition: 1s;
+    margin: 0px;
+    margin-bottom: 6px;
+    font-size: 20px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: #313436;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+b.spotTravelTime {
+    transition: 1s;
+    font-weight: lighter;
+    font-family: "Open sans";
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+p.sortByLabel {
+    font-size: 20px;
+    color: #313436;
+    font-family: 'Roboto';
+    font-weight: bold;
+    padding-top: 33px;
+    padding-left: 30px;
+    float: left;
+}
+#sortBy {
+    float: left;
+    margin-top: 50px;
+    margin-left: 15px;
+    height: 30px;
+    width: 15%;
+    background-color: transparent;
+    cursor: pointer;
+    border:0px;
+    outline:0px;
+    border-bottom: 1px solid #313436;
+    font-size: 20px;
+    font-family: "Open sans";
+}
+img.distanceIcon {
+    opacity: 0.6;
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    margin-right: 5px;
+    float: left;
+}
+p.distanceVal {
+    font-weight: lighter;
+    font-family: "Open sans";
+    font-size: 15px;
+    margin: 0px;
+    margin-top: 2px;
+    margin-left: 4px;
+    float: left;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+img.windIcon {
+    opacity: 0.8;
+    width: 25px;
+    height: 20px;
+    margin-left: 25px;
+    margin-right: 5px;
+    float: left;
+}

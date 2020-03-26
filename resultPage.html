@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <title>Surfing spots</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./style.css">
+        <script src="https://maps.googleapis.com/maps/api/js?key="{google map api key} async defer></script>
+        <script src="code.js"></script>
+    </head>
+    <body>
+        <p id="title" class="productTitle pageOne">Surfing spot finder</p>
+        <div id="pageOne" class="skillSelect">
+            <p class="sectionHeader">How good are you at surfing?</p>
+            <div class="skillSelectBox">
+                <div id="novice" class="skill novice" onclick="selectSkill('novice')">
+                    <p class="skillTitle">Novice</p>
+                    <p class="skillDescription">You've just started surfing, you're looking for somewhere calm to practice and get used to the sport.</p>
+                </div>
+                <div id="intermediate" class="skill intermediate" onclick="selectSkill('intermediate')">
+                    <p class="skillTitle">Intermediate</p>
+                    <p class="skillDescription">You know your way around a board, you're looking for somewhere with a bit of wind but nothing too extreme.</p>
+                </div>
+                <div id="expert" class="skill expert" onclick="selectSkill('expert')">
+                    <p class="skillTitle">Expert</p>
+                    <p class="skillDescription">You know exactly what you're doing, you're looking for somewhere that won't hold back.</p>
+                </div>
+            </div>
+            <div class="locationSelect">
+                <p class="locationSelectionHeader" style="margin-top: 0%;">Where are you?</p>
+                <div id="browserLocation" class="locationOption" onclick="selectLocation(1)">
+                    <p class="locationOptionTitle">Use browser location</p>
+                    <p id="location" class="locationOptionPosition"></p>
+                </div>
+                <div id="customLocation" class="locationOption" onclick="selectLocation(2)">
+                    <p class="locationOptionTitle">Enter your location</p>
+                    <input id="latInput" type="text" class="locationInput"/>
+                    <input id="longInput" type="text" class="locationInput" style="margin-left: 2%;"/>
+                </div>
+            </div>
+            <button id="submit" class="btn disabled" type="button" onclick="requestSpots()" disabled><span>Find spots</span></button>
+        </div>
+        <div id="pageTwo" class="resultScreen rightScreen">
+            <div id="map"></div>
+            <p class="sortByLabel">Sort results by:</p>
+            <select id="sortBy" onchange="orderResults()">
+              <option value="physical">Physical distance</option>
+              <option value="time">Travel time</option>
+              <option value="quality">Spot Quality</option>
+            </select>
+            <div id="spots">
+            </div>
+        </div>
+    </body>
+</html>
