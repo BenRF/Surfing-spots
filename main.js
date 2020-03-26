@@ -17,7 +17,7 @@ fs.readdir("./spots", function (err, files) {
 console.log("RUNNING");
 http.createServer(async function (req, res) {
     if (req.url === "/") {
-        fs.readFile('resultPage.html', function(err, data) {
+        fs.readFile('client.html', function(err, data) {
           res.writeHead(200, {'Content-Type': 'text/html'});
           res.write(data);
           res.end();
