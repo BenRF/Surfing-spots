@@ -17,19 +17,19 @@ fs.readdir("./spots", function (err, files) {
 console.log("RUNNING");
 http.createServer(async function (req, res) {
     if (req.url === "/") {
-        fs.readFile('client.html', function(err, data) {
+        fs.readFile('./Client/client.html', function(err, data) {
           res.writeHead(200, {'Content-Type': 'text/html'});
           res.write(data);
           res.end();
         });
     } else if (req.url === "/style.css") {
-        fs.readFile('style.css', function(err, data) {
+        fs.readFile('./Client/style.css', function(err, data) {
           res.writeHead(200, {'Content-Type': 'text/css'});
           res.write(data);
           res.end();
         });
     } else if (req.url === "/code.js") {
-        fs.readFile('code.js', function(err, data) {
+        fs.readFile('./Client/code.js', function(err, data) {
           res.writeHead(200, {'Content-Type': 'application/javascript'});
           res.write(data);
           res.end();
@@ -115,7 +115,7 @@ async function getDrivingDistance(lat1,long1,lat2,long2) {
     return new Promise((resolve,reject) => {
         var origin = lat1 + "," + long1;
         var destination = lat2 + "," + long2;
-        var apiKey = {google distance matrix api key};
+        var apiKey = {Google distance matrix api key};
         var url = '/maps/api/distancematrix/json?units=imperial&origins=' + origin + '&destinations=' + destination + '&key=' + apiKey;
         var options = {
           'method': 'POST',
@@ -141,7 +141,7 @@ async function getDrivingDistance(lat1,long1,lat2,long2) {
 
 async function getWindSpeed(latitude,longitude) {
     return new Promise((resolve,reject) => {
-        var key = {open weather api key};
+        var key = {Open weather map api key};
         var url = "/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&appid=" + key;
         var options = {
           'method': 'GET',
