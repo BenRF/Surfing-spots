@@ -1,0 +1,24 @@
+{
+  "name": "surfing-spots",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Server.js",
+  "dependencies": {
+    "line-reader": "^0.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenRF/Surfing-spots.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BenRF/Surfing-spots/issues"
+  },
+  "homepage": "https://github.com/BenRF/Surfing-spots#readme"
+}
